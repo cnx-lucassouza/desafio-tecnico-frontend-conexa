@@ -1,14 +1,18 @@
 import { BrowserRouter } from "react-router-dom";
-import Direction from "../src/routes";
-import "./App.css";
+import Direction from "../src/router/index";
+import { AuthProvider } from "./Hooks";
+import { GlobalStyle } from "./styles/globalStyle";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Direction />
-      </BrowserRouter>
-    </div>
+    <>
+      <AuthProvider>
+        <BrowserRouter>
+          <GlobalStyle />
+          <Direction />
+        </BrowserRouter>
+      </AuthProvider>
+    </>
   );
 }
 
