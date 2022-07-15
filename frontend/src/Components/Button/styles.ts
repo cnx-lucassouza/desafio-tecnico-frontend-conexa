@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.button`
   height: 2.5rem;
   border: 0;
   border-radius: 0.5rem;
+
   font-size: 0.875rem;
   font-weight: bold;
   line-height: 1.125rem;
@@ -16,10 +17,4 @@ export const ButtonContainer = styled.div`
   &:hover {
     background-color: var(--blue-dark);
   }
-`;
-export const ButtonStyles = styled.button`
-  height: 30px;
-  width: 60px;
-  background: blue;
-
 `;

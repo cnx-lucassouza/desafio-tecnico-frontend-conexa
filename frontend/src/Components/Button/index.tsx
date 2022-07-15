@@ -1,17 +1,7 @@
 import React from "react";
-import { ButtonContainer, ButtonStyles } from "./styles";
+import { ButtonContainer } from "./styles";
 import { IButtonProps } from "./types";
 
-
-
-const Button: React.FC<IButtonProps> = ({ onClick, children, ...props }) => {
-  return (
-    <ButtonContainer>
-      <ButtonStyles {...props} onClick={onClick}>
-        {children}
-      </ButtonStyles>
-    </ButtonContainer>
-  );
+export const Button: React.FC<IButtonProps> = ({ children, ...props }) => {
+  return <ButtonContainer {...props}>{children}</ButtonContainer>;
 };
-
-export default Button;
