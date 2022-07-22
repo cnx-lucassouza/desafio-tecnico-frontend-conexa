@@ -1,17 +1,17 @@
-import { FC, useCallback, useEffect, useRef, useState } from "react";
+import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import {
   InputContainer,
   InputWrapper,
   LabelContainer,
   Tooltip,
   TooltipText,
-} from "./styles";
-import InputProps from "./types";
-import { FiEye, FiEyeOff, FiHelpCircle } from "react-icons/fi";
-import { useField } from "@unform/core";
+} from './styles';
+import InputProps from './types';
+import { FiEye, FiEyeOff, FiHelpCircle } from 'react-icons/fi';
+import { useField } from '@unform/core';
 
 const Input: FC<InputProps> = ({
-  type = "text",
+  type = 'text',
   name,
   label,
   tooltip,
@@ -25,7 +25,7 @@ const Input: FC<InputProps> = ({
     registerField({
       name: fieldName,
       ref: inputRef.current,
-      path: "value",
+      path: 'value',
     });
   }, [registerField, fieldName]);
 
@@ -46,13 +46,13 @@ const Input: FC<InputProps> = ({
       <InputWrapper>
         <p>{label}</p>
         <input
-          type={isShowingContent ? "text" : type}
+          type={isShowingContent ? 'text' : type}
           id={fieldName}
           ref={inputRef}
           defaultValue={defaultValue}
           {...props}
         />
-        {type === "password" ? (
+        {type === 'password' ? (
           <button type="button" onClick={toggleShowContent}>
             {isShowingContent ? <FiEye /> : <FiEyeOff />}
           </button>

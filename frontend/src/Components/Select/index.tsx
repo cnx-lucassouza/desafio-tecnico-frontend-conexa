@@ -26,7 +26,7 @@ const Select: FC<SelectProps> = ({ name, label, children, ...rest }) => {
   }, [fieldName, registerField]);
 
   return (
-    <SelectContainer>
+    <SelectContainer data-testid="pure_select">
       <label htmlFor={fieldName}>{label}</label>
 
       <select

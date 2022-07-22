@@ -20,7 +20,7 @@ const FixedFooter: FC<FixedFooterProps> = ({ onOpenNewTransactionModal }) => {
 
   return (
     <>
-      <FixedFooterContainer>
+      <FixedFooterContainer data-testid="pure_footer">
         <div>
           <ButtonStroke type="button" onClick={handleOpenHelpModal}>
             Ajuda

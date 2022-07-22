@@ -1,14 +1,14 @@
-import React, { FC, useCallback, useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
-import { AttendanceList } from "../../Components/AttendanceList";
-import { FixedFooter } from "../../Components/Footer";
-import { Header } from "../../Components/Header";
-import { NewAttendanceModal } from "../../Components/Modals/NewAppointmentModal";
-import { LogoutModal } from "../../Components/Modals/LogoutModal";
-import { useAuth } from "../../Hooks";
-import api from "../../Services/api";
-import { AttendanceContainer } from "./styles";
-import { Attendance, CreateNewAttendanceProps } from "./types";
+import React, { FC, useCallback, useEffect, useState } from 'react';
+import { Navigate } from 'react-router-dom';
+import { AttendanceList } from '../../Components/AttendanceList';
+import { FixedFooter } from '../../Components/Footer';
+import { Header } from '../../Components/Header';
+import { LogoutModal } from '../../Components/Modals/LogoutModal';
+import { NewAttendanceModal } from '../../Components/Modals/NewAppointmentModal';
+import { useAuth } from '../../Hooks';
+import api from '../../Services/api';
+import { AttendanceContainer } from './styles';
+import { Attendance, CreateNewAttendanceProps } from './types';
 
 const AttendancesPage: FC = () => {
   const [attendances, setAttendances] = useState<Attendance[]>([]);
@@ -18,7 +18,7 @@ const AttendancesPage: FC = () => {
   const { token } = useAuth();
 
   useEffect(() => {
-    const storedAttendance = localStorage.getItem("@conexa:appointments");
+    const storedAttendance = localStorage.getItem('@conexa:appointments');
 
     if (storedAttendance) {
       const parsedAttendances = JSON.parse(storedAttendance);
@@ -33,13 +33,13 @@ const AttendancesPage: FC = () => {
         };
 
         const response = await api.get(
-          "/consultations?_expand=patient",
-          requestConfig
+          '/consultations?_expand=patient',
+          requestConfig,
         );
 
         localStorage.setItem(
-          "@conexa:appointments",
-          JSON.stringify(response.data)
+          '@conexa:appointments',
+          JSON.stringify(response.data),
         );
 
         setAttendances(response.data);
@@ -62,16 +62,16 @@ const AttendancesPage: FC = () => {
       };
 
       const response = await api.post(
-        "/consultations",
+        '/consultations',
         requestData,
-        requestConfig
+        requestConfig,
       );
 
       const newAttendance = response.data;
 
       const patientResponse = await api.get(
         `/patients?id=${newAttendance.patientId}`,
-        requestConfig
+        requestConfig,
       );
 
       const attendance = {
@@ -84,11 +84,11 @@ const AttendancesPage: FC = () => {
       setAttendances([...attendances, attendance]);
 
       localStorage.setItem(
-        "@conexa:appointments",
-        JSON.stringify([...attendances, attendance])
+        '@conexa:appointments',
+        JSON.stringify([...attendances, attendance]),
       );
     },
-    [token, attendances]
+    [token, attendances],
   );
   const handleOpenNewAttendanceModal = useCallback(() => {
     setIsNewAttendanceModalOpen(true);
@@ -108,7 +108,7 @@ const AttendancesPage: FC = () => {
 
   return token ? (
     <>
-      <Header onOpenSignOutModal={handleOpenLogoutModal} />
+      <Header onOpenLogoutModal={handleOpenLogoutModal} />
 
       <AttendanceContainer>
         <h1>Consultas</h1>

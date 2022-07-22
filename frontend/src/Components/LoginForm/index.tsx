@@ -16,7 +16,7 @@ const LoginForm: FC = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = useCallback(
+ const handleSubmit = useCallback(
     async (data: loginDetails) => {
       try {
         formRef.current?.setErrors({});
@@ -60,7 +60,7 @@ const LoginForm: FC = () => {
 
   return (
     <>
-      <SignInFormContainer ref={formRef} onSubmit={handleSubmit}>
+      <SignInFormContainer data-testid="pure_loginForm" ref={formRef} onSubmit={handleSubmit}>
         <Input
           type="email"
           name="email"

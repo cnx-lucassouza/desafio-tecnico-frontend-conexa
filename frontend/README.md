@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+<div align="center"> 
+  <img src="frontend/src/assets/logo-conexa.svg" alt="Conexa Saúde" />
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <a href="#information_source-Sobre-o-projeto">Sobre</a> &#xa0; | &#xa0;
+  <a href="#rocket-tecnologias-e-ferramentas">Tecnologias e ferramentas</a> &#xa0; | &#xa0;
+  <a href="#wrench-como-rodar-o-projeto">Como rodar o projeto</a>
+</div>
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+Na aplicação você pode:
+- efetuar autenticação
+- listar consultas
+- criar novas consultas
 
-### `yarn start`
+## :rocket: Tecnologias e ferramentas ##
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Tecnologias e ferramentas que foram usadas no desenvolvimento do projeto:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [React](https://pt-br.reactjs.org/) para construção da aplicação
+- [React Router](https://reactrouter.com/) para lidar com roteamento
+- [TypeScript](https://www.typescriptlang.org/) como linguagem principal
+- [Styled Components](https://styled-components.com) para construção dos estilos
+- [React testing library](https://testing-library.com/docs/react-testing-library/intro/) Para realizar alguns testes
+- [Unform](https://unform.dev) para lidar com formulários de forma performática
+- [Axios](https://axios-http.com) para lidar com as requisições
+- [Yup](https://github.com/jquense/yup) para validação de formulários
+- [ESLint](https://eslint.org) para encontrar problemas no código
+- [Prettier](https://prettier.io) para formatação do código
 
-### `yarn test`
+## :wrench: Como rodar o projeto ##
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+É necessário ter instalado:
+- [Git](https://git-scm.com)
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
 
-### `yarn build`
+### Faça um clone do projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+$ git clone https://gitlab.com/jonathanpauluze/desafio-tecnico-frontend-conexa.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Instalando as dependências
+```bash
+# Acesse o diretório do projeto
+$ cd desafio-tecnico-frontend-conexa
+# Instale as dependências do back-end
+$ cd backend
+$ yarn
+# Instale as dependências do front-end
+$ cd frontend
+$ yarn
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Iniciando a aplicação
+```bash
+# Inicie o servidor
+$ cd backend
+$ yarn start # servidor na porta 3333
+# Abra uma nova aba no terminal e inicie a aplicação
+$ cd frontend
+$ yarn start # app na porta 3000
+```
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="center">Feito por Lucas</p>

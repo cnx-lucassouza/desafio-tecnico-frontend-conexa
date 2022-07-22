@@ -19,7 +19,7 @@ const WaitingRoom: FC = () => {
 
   return token ? (
     <>
-      <Header onOpenSignOutModal={handleOpenSignOutModal} />
+      <Header onOpenLogoutModal={handleOpenSignOutModal} />
 
       <AttendanceContainer>
         <h1>Sala de espera</h1>

@@ -1,13 +1,14 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode } from 'react';
 
-import { ErrorMessageContainer } from "./styles";
-
-interface ErrorMessageProps {
-  children: ReactNode;
-}
+import { ErrorMessageContainer } from './styles';
+import { ErrorMessageProps } from './types';
 
 const ErrorMessage: FC<ErrorMessageProps> = ({ children }) => {
-  return <ErrorMessageContainer>{children}</ErrorMessageContainer>;
+  return (
+    <ErrorMessageContainer data-testid="pure_errorMessage">
+      {children}
+    </ErrorMessageContainer>
+  );
 };
 
 export { ErrorMessage };

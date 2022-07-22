@@ -1,15 +1,11 @@
-import { LoginForm } from "../../Components/LoginForm";
-import { Header } from "../../Components/Header";
-import signinBg from "../../assets/signin-bg.svg";
-import { Navigate } from "react-router-dom";
-import {
-  LoginContainer,
-  LoginFormWrapper,
-  LoginTitleWrapper,
-} from "./styles";
+import { LoginForm } from '../../Components/LoginForm';
+import { Header } from '../../Components/Header';
+import signinBg from '../../assets/signin-bg.svg';
+import { Navigate } from 'react-router-dom';
+import { LoginContainer, LoginFormWrapper, LoginTitleWrapper } from './styles';
 
 export const LoginPage = () => {
-  const haveToken = localStorage.getItem("@conexa:token");
+  const haveToken = localStorage.getItem('@conexa:token');
   return haveToken ? (
     <Navigate to="/attendances" />
   ) : (

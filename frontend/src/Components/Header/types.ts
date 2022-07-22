@@ -1,8 +1,7 @@
- export const isMobileHeader = ({
-  }) => {
-    return 'space-between' && 'center';
-  };
-  
+export const isMobileHeader = ({}) => {
+  return 'space-between' && 'center';
+};
+
 export interface HeaderProps {
-  onOpenSignOutModal?(): void;
+  onOpenLogoutModal?(): void;
 }

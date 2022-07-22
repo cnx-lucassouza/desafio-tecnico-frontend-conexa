@@ -19,6 +19,16 @@
       "id": 4,
       "patientId": 3,
       "date": "Thu Feb 11 2021 13:00:00 GMT-0300 (Brasilia Standard Time)"
+    },
+    {
+      "patientId": "1",
+      "date": "Mon Apr 10 2023 13:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "id": 5
+    },
+    {
+      "patientId": "2",
+      "date": "Sat Feb 12 2022 12:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "id": 6
     }
   ],
   "patients": [

@@ -8,10 +8,9 @@ import { Button } from "../Button";
 import { HeaderContainer, HeaderObject, HeaderText } from "./styles";
 import { HeaderProps } from "./types";
 
-export const Header: FC<HeaderProps> = ({ onOpenSignOutModal }) => {
+export const Header: FC<HeaderProps> = ({ onOpenLogoutModal }) => {
   const { user } = useAuth();
   const haveToken = localStorage.getItem("@conexa:token");
-
   return (
     <HeaderContainer>
       <HeaderObject>
@@ -21,7 +20,7 @@ export const Header: FC<HeaderProps> = ({ onOpenSignOutModal }) => {
         {haveToken ? (
           <HeaderText>
             <p>Olá, Dr. {user}</p>
-            <Button onClick={onOpenSignOutModal}>Sair</Button>
+            <Button onClick={onOpenLogoutModal}>Sair</Button>
           </HeaderText>
         ) : null}
       </HeaderObject>
