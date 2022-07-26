@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import Direction from "../src/router/index";
-import { AuthProvider } from "./Hooks";
+import { AuthProvider } from "./hooks";
 import { GlobalStyle } from "./styles/globalStyle";
 
 function App() {

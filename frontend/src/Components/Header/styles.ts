@@ -15,6 +15,7 @@ export const HeaderObject = styled.div`
   height: 3.563rem;
   margin: 0 auto;
   padding: 0 1rem;
+  margin-left: 16px;
 
   @media (max-width: 768px) {
     justify-content: ${isMobileHeader};
@@ -24,6 +25,7 @@ export const HeaderObject = styled.div`
 export const HeaderText = styled.div`
   display: flex;
   align-items: center;
+  margin-right: -430px;
 
   p {
     font-weight: 600;

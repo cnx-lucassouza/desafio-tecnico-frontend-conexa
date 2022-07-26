@@ -1,22 +1,22 @@
-import { FC, useState, useEffect, useRef, useCallback } from "react";
-import { FiX } from "react-icons/fi";
-import * as Yup from "yup";
-import { FormHandles } from "@unform/core";
-import Modal from "react-modal";
+import { FunctionComponent, useState, useEffect, useRef, useCallback } from 'react';
+import { FiX } from 'react-icons/fi';
+import * as Yup from 'yup';
+import { FormHandles } from '@unform/core';
+import Modal from 'react-modal';
 
-import { NewAttendanceTitle, NewAttendanceForm } from "./styles";
-import getValidationErrors from "../../../utils";
-import { useAuth } from "../../../Hooks";
-import { Button } from "../../Button";
-import { Input } from "../../Input";
-import api from "../../../Services/api";
-import { Select } from "../../Select";
-import { CreateNewAttendanceProps } from "../../../Pages/Attendances/types";
-import { NewAttendanceModalProps, Patient } from "./types";
+import { NewAttendanceTitle, NewAttendanceForm } from './styles';
+import getValidationErrors from '../../../utils';
+import { Button } from '../../Button';
+import { Input } from '../../Input';
+import { Select } from '../../Select';
+import { NewAttendanceModalProps, Patient } from './types';
+import { CreateNewAttendanceProps } from '../../../pages/Attendances/types';
+import { useAuth } from '../../../hooks';
+import api from '../../../services/api';
 
-Modal.setAppElement("#root");
+Modal.setAppElement('#root');
 
-const NewAttendanceModal: FC<NewAttendanceModalProps> = ({
+const NewAttendanceModal: FunctionComponent<NewAttendanceModalProps> = ({
   isOpen,
   onRequestClose,
   createNewAttendance,
@@ -26,7 +26,7 @@ const NewAttendanceModal: FC<NewAttendanceModalProps> = ({
   const { token } = useAuth();
 
   useEffect(() => {
-    const storagedPatients = localStorage.getItem("@conexa:patients");
+    const storagedPatients = localStorage.getItem('@conexa:patients');
 
     if (storagedPatients) {
       const parsedPatients: Patient[] = JSON.parse(storagedPatients);
@@ -40,9 +40,9 @@ const NewAttendanceModal: FC<NewAttendanceModalProps> = ({
           },
         };
 
-        const response = await api.get("/patients", requestConfig);
+        const response = await api.get('/patients', requestConfig);
 
-        localStorage.setItem("@conexa:patients", JSON.stringify(response.data));
+        localStorage.setItem('@conexa:patients', JSON.stringify(response.data));
       };
 
       fetchPatients();
@@ -55,9 +55,9 @@ const NewAttendanceModal: FC<NewAttendanceModalProps> = ({
         formRef.current?.setErrors({});
 
         const validationSchema = Yup.object().shape({
-          patientId: Yup.string().notOneOf(["0"], "Paciente obrigatório"),
-          date: Yup.string().required("Data obrigatória"),
-          time: Yup.string().required("Hora obrigatória"),
+          patientId: Yup.string().notOneOf(['0'], 'Paciente obrigatório'),
+          date: Yup.string().required('Data obrigatória'),
+          time: Yup.string().required('Hora obrigatória'),
         });
 
         await validationSchema.validate(data, {
@@ -75,7 +75,7 @@ const NewAttendanceModal: FC<NewAttendanceModalProps> = ({
         }
       }
     },
-    [createNewAttendance, onRequestClose]
+    [createNewAttendance, onRequestClose],
   );
 
   return (
@@ -100,13 +100,12 @@ const NewAttendanceModal: FC<NewAttendanceModalProps> = ({
           <option disabled value="0">
             Selecione um paciente
           </option>
-          {patients.map((patient) => (
+          {patients.map(patient => (
             <option key={patient.first_name} value={patient.id}>
               {patient.first_name} {patient.last_name}
             </option>
           ))}
         </Select>
-
         <Input name="date" type="date" label="Data" />
 
         <Input name="time" type="time" label="Hora" />

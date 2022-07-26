@@ -1,16 +1,16 @@
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import React, { FunctionComponent, useCallback, useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import { AttendanceList } from '../../Components/AttendanceList';
 import { FixedFooter } from '../../Components/Footer';
 import { Header } from '../../Components/Header';
 import { LogoutModal } from '../../Components/Modals/LogoutModal';
 import { NewAttendanceModal } from '../../Components/Modals/NewAppointmentModal';
-import { useAuth } from '../../Hooks';
-import api from '../../Services/api';
+import { useAuth } from '../../hooks';
+import api from '../../services/api';
 import { AttendanceContainer } from './styles';
 import { Attendance, CreateNewAttendanceProps } from './types';
 
-const AttendancesPage: FC = () => {
+const AttendancesPage: FunctionComponent = () => {
   const [attendances, setAttendances] = useState<Attendance[]>([]);
   const [isNewAttendanceModalOpen, setIsNewAttendanceModalOpen] =
     useState(false);

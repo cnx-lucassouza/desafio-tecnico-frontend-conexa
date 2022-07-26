@@ -1,14 +1,14 @@
 import React from "react";
-import { FC } from "react";
+import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import logoImg from "../../assets/logo-conexa.svg";
-import { useAuth } from "../../Hooks";
-import { Button } from "../Button";
+import { useAuth } from "../../hooks";
+import { ButtonStroke } from "../ButtonStroke";
 
 import { HeaderContainer, HeaderObject, HeaderText } from "./styles";
 import { HeaderProps } from "./types";
 
-export const Header: FC<HeaderProps> = ({ onOpenLogoutModal }) => {
+export const Header: FunctionComponent<HeaderProps> = ({ onOpenLogoutModal }) => {
   const { user } = useAuth();
   const haveToken = localStorage.getItem("@conexa:token");
   return (
@@ -20,7 +20,7 @@ export const Header: FC<HeaderProps> = ({ onOpenLogoutModal }) => {
         {haveToken ? (
           <HeaderText>
             <p>Olá, Dr. {user}</p>
-            <Button onClick={onOpenLogoutModal}>Sair</Button>
+            <ButtonStroke onClick={onOpenLogoutModal}>Sair</ButtonStroke>
           </HeaderText>
         ) : null}
       </HeaderObject>

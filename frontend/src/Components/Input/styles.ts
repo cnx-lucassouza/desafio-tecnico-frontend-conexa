@@ -41,6 +41,7 @@ export const InputWrapper = styled.div`
 
     svg {
       color: var(--gray-medium);
+      margin-top: 30px;
     }
   }
 `;

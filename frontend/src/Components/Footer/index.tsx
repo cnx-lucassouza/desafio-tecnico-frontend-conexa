@@ -1,4 +1,4 @@
-import { FC, useState, useCallback } from "react";
+import { FunctionComponent, useState, useCallback } from "react";
 
 import { ButtonStroke } from "../ButtonStroke";
 import { Button } from "../Button";
@@ -7,7 +7,7 @@ import { FixedFooterContainer } from "./styles";
 import { FixedFooterProps } from "./types";
 import { HelpModal } from "../Modals/HelpModal";
 
-const FixedFooter: FC<FixedFooterProps> = ({ onOpenNewTransactionModal }) => {
+const FixedFooter: FunctionComponent<FixedFooterProps> = ({ onOpenNewTransactionModal }) => {
   const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
 
   const handleOpenHelpModal = useCallback(() => {

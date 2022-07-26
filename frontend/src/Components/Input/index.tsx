@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { FunctionComponent, useCallback, useEffect, useRef, useState } from 'react';
 import {
   InputContainer,
   InputWrapper,
@@ -10,7 +10,7 @@ import InputProps from './types';
 import { FiEye, FiEyeOff, FiHelpCircle } from 'react-icons/fi';
 import { useField } from '@unform/core';
 
-const Input: FC<InputProps> = ({
+const Input: FunctionComponent<InputProps> = ({
   type = 'text',
   name,
   label,
@@ -18,7 +18,7 @@ const Input: FC<InputProps> = ({
   ...props
 }) => {
   const inputRef = useRef(null);
-  const { fieldName, defaultValue, error, registerField } = useField(name);
+  const { fieldName, defaultValue, registerField } = useField(name);
   const [isShowingContent, setIsShowingContent] = useState(false);
 
   useEffect(() => {

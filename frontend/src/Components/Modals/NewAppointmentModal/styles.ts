@@ -11,7 +11,6 @@ export const NewAttendanceTitle = styled.h3`
     font-size: 1.75rem;
   }
 `;
-
 export const NewAttendanceForm = styled(Form)`
   display: flex;
   flex-direction: column;
@@ -25,5 +24,9 @@ export const NewAttendanceForm = styled(Form)`
   > button {
     align-self: flex-end;
     margin-top: 4rem;
+  }
+  > input{
+    width: 480px;
+    background: red;
   }
 `;

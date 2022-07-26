@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FunctionComponent } from "react";
 import Modal from "react-modal";
 import { FiX } from "react-icons/fi";
 
@@ -12,7 +12,7 @@ import { FAQ_LIST } from "../../../constants";
 
 Modal.setAppElement("#root");
 
-const HelpModal: FC<HelpModalProps> = ({ isOpen, onRequestClose }) => {
+const HelpModal: FunctionComponent<HelpModalProps> = ({ isOpen, onRequestClose }) => {
   return (
     <Modal
       isOpen={isOpen}

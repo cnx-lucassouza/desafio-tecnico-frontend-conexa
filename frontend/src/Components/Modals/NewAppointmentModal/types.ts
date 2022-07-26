@@ -1,4 +1,4 @@
-import { CreateNewAttendanceProps } from "../../../Pages/Attendances/types";
+import { CreateNewAttendanceProps } from "../../../pages/Attendances/types";
 
 export interface NewAttendanceModalProps {
   isOpen: boolean;

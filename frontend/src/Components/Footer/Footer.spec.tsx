@@ -5,7 +5,9 @@ import { FixedFooter } from '.';
 describe('Teste do componente Footer', () => {
   test('renderizacao sem quebrar', () => {
     const { getByText } = render(
-      <FixedFooter onOpenNewTransactionModal={function (): void {}} />,
+      <div id="root">
+        <FixedFooter onOpenNewTransactionModal={() => {}} />
+      </div>,
     );
     expect(getByText).toBeTruthy();
   });

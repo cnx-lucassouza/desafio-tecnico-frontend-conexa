@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const AttendanceContainer = styled.main`
   width: 100%;
@@ -8,6 +8,7 @@ export const AttendanceContainer = styled.main`
 
   h1 {
     margin: 0 0 2.5rem 1rem;
+    margin-left: -75px;
     font-size: 3rem;
     font-weight: bold;
     color: var(--blue-dark);

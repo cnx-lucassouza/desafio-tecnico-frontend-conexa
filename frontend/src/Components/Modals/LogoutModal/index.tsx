@@ -1,16 +1,16 @@
-import { FC } from "react";
+import { FunctionComponent } from "react";
 import Modal from "react-modal";
 import { FiX } from "react-icons/fi";
 
 import { LogoutModalTitle, LogoutModalButtonsWrapper } from "./styles";
-import { useAuth } from "../../../Hooks";
+import { useAuth } from "../../../hooks";
 import { ButtonStroke } from "../../ButtonStroke";
 import { Button } from "../../Button";
 import { LogoutModalProps } from "./types";
 
 Modal.setAppElement("#root");
 
-const LogoutModal: FC<LogoutModalProps> = ({ isOpen, onRequestClose }) => {
+const LogoutModal: FunctionComponent<LogoutModalProps> = ({ isOpen, onRequestClose }) => {
   const { logout } = useAuth();
 
   return (

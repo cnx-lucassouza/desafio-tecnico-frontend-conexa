@@ -1,17 +1,17 @@
-import { FC, useRef, useCallback } from "react";
+import { FunctionComponent, useRef, useCallback } from "react";
 import * as Yup from "yup";
 import { Input } from "../Input";
 import { FormHandles } from "@unform/core";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../Button";
 import { SignInFormContainer } from "./styles";
-import { loginDetails } from "../../Hooks/types";
+import { loginDetails } from "../../hooks/types";
 import getValidationErrors from "../../utils";
-import { useAuth } from "../../Hooks";
+import { useAuth } from "../../hooks";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
-const LoginForm: FC = () => {
+const LoginForm: FunctionComponent = () => {
   const formRef = useRef<FormHandles>(null);
   const { login } = useAuth();
   const navigate = useNavigate();

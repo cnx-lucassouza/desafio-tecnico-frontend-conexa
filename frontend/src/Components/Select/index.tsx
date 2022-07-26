@@ -1,10 +1,10 @@
-import { FC, useRef, useEffect } from "react";
+import { FunctionComponent, useRef, useEffect } from "react";
 import { useField } from "@unform/core";
 import { ErrorMessage } from "../ErrorMessage";
 import { SelectContainer } from "./styles";
 import { SelectProps } from "./types";
 
-const Select: FC<SelectProps> = ({ name, label, children, ...rest }) => {
+const Select: FunctionComponent<SelectProps> = ({ name, label, children, ...rest }) => {
   const selectRef = useRef(null);
 
   const { fieldName, defaultValue, registerField, error } = useField(name);

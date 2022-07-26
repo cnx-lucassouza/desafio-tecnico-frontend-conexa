@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import waitingImg from "../../assets/waiting-room.svg";
+import styled from 'styled-components';
+import waitingImg from '../../assets/waiting-room.svg';
 
 export const WaitingRoomContainer = styled.div`
   width: 100%;
@@ -30,5 +30,14 @@ export const WaitingRoomContainer = styled.div`
         margin-top: 2.5rem;
       }
     }
+  }
+`;
+
+export const ButtonFooterFixed = styled.div`
+  position: fixed;
+  margin-top: 300px;
+
+  @media (max-width: 768px) {
+    border-top: 2px solid var(--gray);
   }
 `;

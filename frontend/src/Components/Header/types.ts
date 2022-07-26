@@ -1,5 +1,6 @@
+// eslint-disable-next-line
 export const isMobileHeader = ({}) => {
-  return 'space-between' && 'center';
+  return 'space-between';
 };
 
 export interface HeaderProps {

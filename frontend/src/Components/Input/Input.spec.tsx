@@ -4,7 +4,7 @@ import { Input } from '.';
 
 describe('Teste do componente Input', () => {
   test('renderizacao sem quebrar', () => {
-    const { getByText } = render(<Input name={''} label={''} tooltip={''} type={'text'}/>);
+    const { getByText } = render(<Input name={'teste'} label={'teste'} tooltip={'teste'} type={'text'}/>);
     expect(getByText).toBeTruthy();
   });
 });

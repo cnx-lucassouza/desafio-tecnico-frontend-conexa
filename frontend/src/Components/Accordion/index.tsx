@@ -1,10 +1,10 @@
-import { FC, useState } from "react";
+import { FunctionComponent, useState } from "react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 import { AccordionContainer } from "./styles";
 import { AccordionProps } from "./types";
 
-const AccordionAction: FC<AccordionProps> = ({ question, answer }) => {
+const AccordionAction: FunctionComponent<AccordionProps> = ({ question, answer }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (

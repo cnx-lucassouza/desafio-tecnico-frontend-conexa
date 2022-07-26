@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FunctionComponent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../Button';
 import { NoAttendance } from '../NoAttendance/index';
@@ -9,7 +9,7 @@ import {
 } from './styles';
 import { AttendanceListProps } from './types';
 
-export const AttendanceList: FC<AttendanceListProps> = ({ attendances }) => {
+export const AttendanceList: FunctionComponent<AttendanceListProps> = ({ attendances }) => {
   const navigate = useNavigate();
 
   if (!attendances.length) {
@@ -34,7 +34,7 @@ export const AttendanceList: FC<AttendanceListProps> = ({ attendances }) => {
         });
 
         return (
-          <AttendanceListItem key={id}>
+          <AttendanceListItem key={id} data-testid={`attendance-${id}`}>
             <div>
               <p title={fullName}>{fullName}</p>
               <span>
@@ -42,7 +42,12 @@ export const AttendanceList: FC<AttendanceListProps> = ({ attendances }) => {
               </span>
             </div>
 
-            <Button onClick={callAttendance}>Atender</Button>
+            <Button
+              onClick={callAttendance}
+              data-testid={`attendance-${id}-button`}
+            >
+              Atender
+            </Button>
           </AttendanceListItem>
         );
       })}

@@ -1,4 +1,4 @@
-import { Attendance } from "../../Pages/Attendances/types";
+import { Attendance } from "../../pages/Attendances/types";
 
 export interface AttendanceListProps {
   attendances: Attendance[];

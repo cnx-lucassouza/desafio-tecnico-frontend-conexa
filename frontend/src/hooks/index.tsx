@@ -1,5 +1,5 @@
-import { createContext, FC, useCallback, useContext, useState } from "react";
-import api from "../Services/api";
+import { createContext, FunctionComponent, useCallback, useContext, useState } from "react";
+import api from "../services/api";
 import {
   AuthContextData,
   AuthProviderProps,
@@ -9,7 +9,7 @@ import {
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
-export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
+export const AuthProvider: FunctionComponent<AuthProviderProps> = ({ children }) => {
   const [data, setData] = useState<AuthState>(() => {
     const token = localStorage.getItem("@conexa:token");
     const name = localStorage.getItem("@conexa:name");

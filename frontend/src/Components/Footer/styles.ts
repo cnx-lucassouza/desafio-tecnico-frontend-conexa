@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const FixedFooterContainer = styled.footer`
   position: fixed;
+  justify-content: space-between;
   right: 0;
   bottom: 0;
   left: 0;

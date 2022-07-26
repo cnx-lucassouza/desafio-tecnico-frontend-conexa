@@ -1,12 +1,12 @@
-import React, { FC, useCallback, useState } from "react";
+import React, { FunctionComponent, useCallback, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { Header } from "../../Components/Header";
 import { LogoutModal } from "../../Components/Modals/LogoutModal";
 import { WaitingRoomInform } from "../../Components/WaitingRoomInform";
-import { useAuth } from "../../Hooks";
+import { useAuth } from "../../hooks";
 import { AttendanceContainer } from "../Attendances/styles";
 
-const WaitingRoom: FC = () => {
+const WaitingRoom: FunctionComponent = () => {
   const [isSignOutModalOpen, setIsSignOutModalOpen] = useState(false);
   const { token } = useAuth();
   const handleOpenSignOutModal = useCallback(() => {
