@@ -17,6 +17,5 @@ describe('Teste do componente AttendanceList', () => {
     expect(attendace1).toHaveTextContent('Valida a hora se ta ok');
     const attendaceButton = screen.getByTestId('attendance-1-button');
     expect(attendaceButton).toHaveTextContent('Atender');
-      attendaceButton.click();
   });
 });

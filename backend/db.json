@@ -29,6 +29,11 @@
       "patientId": "2",
       "date": "Sat Feb 12 2022 12:00:00 GMT-0300 (Horário Padrão de Brasília)",
       "id": 6
+    },
+    {
+      "patientId": "1",
+      "date": "Sat Aug 20 2022 13:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "id": 7
     }
   ],
   "patients": [

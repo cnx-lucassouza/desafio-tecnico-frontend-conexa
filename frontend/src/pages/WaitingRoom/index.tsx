@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 import { Header } from "../../Components/Header";
 import { LogoutModal } from "../../Components/Modals/LogoutModal";
 import { WaitingRoomInform } from "../../Components/WaitingRoomInform";
-import { useAuth } from "../../hooks";
+import { useAuth } from "../../hooks/useAuth";
 import { AttendanceContainer } from "../Attendances/styles";
 
 const WaitingRoom: FunctionComponent = () => {

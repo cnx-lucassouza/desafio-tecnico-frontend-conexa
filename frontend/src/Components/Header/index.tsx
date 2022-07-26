@@ -2,7 +2,7 @@ import React from "react";
 import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import logoImg from "../../assets/logo-conexa.svg";
-import { useAuth } from "../../hooks";
+import { useAuth } from "../../hooks/useAuth";
 import { ButtonStroke } from "../ButtonStroke";
 
 import { HeaderContainer, HeaderObject, HeaderText } from "./styles";

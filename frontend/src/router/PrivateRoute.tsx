@@ -1,4 +1,4 @@
-import { useAuth } from '../hooks/index';
+import { useAuth } from '../hooks/useAuth/index';
 import { FunctionComponent, useCallback } from 'react';
 import { Navigate, Route, RouteProps } from 'react-router-dom';
 

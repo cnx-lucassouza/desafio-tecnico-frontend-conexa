@@ -5,14 +5,14 @@ import { FormHandles } from '@unform/core';
 import Modal from 'react-modal';
 
 import { NewAttendanceTitle, NewAttendanceForm } from './styles';
-import getValidationErrors from '../../../utils';
+import getValidationErrors from '../../../utils/getValidationErrors';
 import { Button } from '../../Button';
 import { Input } from '../../Input';
 import { Select } from '../../Select';
 import { NewAttendanceModalProps, Patient } from './types';
 import { CreateNewAttendanceProps } from '../../../pages/Attendances/types';
-import { useAuth } from '../../../hooks';
-import api from '../../../services/api';
+import { useAuth } from '../../../hooks/useAuth';
+import api from '../../../Services/api';
 
 Modal.setAppElement('#root');
 

@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { FiX } from "react-icons/fi";
 
 import { LogoutModalTitle, LogoutModalButtonsWrapper } from "./styles";
-import { useAuth } from "../../../hooks";
+import { useAuth } from "../../../hooks/useAuth";
 import { ButtonStroke } from "../../ButtonStroke";
 import { Button } from "../../Button";
 import { LogoutModalProps } from "./types";

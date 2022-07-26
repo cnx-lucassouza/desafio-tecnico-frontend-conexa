@@ -5,11 +5,10 @@ import { FormHandles } from "@unform/core";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../Button";
 import { SignInFormContainer } from "./styles";
-import { loginDetails } from "../../hooks/types";
-import getValidationErrors from "../../utils";
-import { useAuth } from "../../hooks";
+import getValidationErrors from "../../utils/getValidationErrors";
+import { useAuth } from "../../hooks/useAuth";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.min.css";
+import { loginDetails } from "../../hooks/useAuth/types";
 
 const LoginForm: FunctionComponent = () => {
   const formRef = useRef<FormHandles>(null);

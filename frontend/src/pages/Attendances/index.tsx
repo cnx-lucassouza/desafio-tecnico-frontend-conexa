@@ -5,8 +5,8 @@ import { FixedFooter } from '../../Components/Footer';
 import { Header } from '../../Components/Header';
 import { LogoutModal } from '../../Components/Modals/LogoutModal';
 import { NewAttendanceModal } from '../../Components/Modals/NewAppointmentModal';
-import { useAuth } from '../../hooks';
-import api from '../../services/api';
+import { useAuth } from '../../hooks/useAuth';
+import api from '../../Services/api';
 import { AttendanceContainer } from './styles';
 import { Attendance, CreateNewAttendanceProps } from './types';
 

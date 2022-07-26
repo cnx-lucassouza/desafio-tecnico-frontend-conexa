@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import { ButtonFooterFixed, WaitingRoomContainer } from './styles';
-import { useAuth } from '../../hooks';
+import { useAuth } from '../../hooks/useAuth';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Button } from '../Button';
 

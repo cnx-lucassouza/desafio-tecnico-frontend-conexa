@@ -1,5 +1,5 @@
 import { createContext, FunctionComponent, useCallback, useContext, useState } from "react";
-import api from "../services/api";
+import api from "../../Services/api";
 import {
   AuthContextData,
   AuthProviderProps,
